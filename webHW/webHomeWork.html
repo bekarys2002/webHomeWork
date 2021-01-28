@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <template id="pervaya_mawina_template">
+        <img class="pervaya_mawina" src="https://www.hdcarwallpapers.com/thumbs/2016/2017_mercedes_benz_c_class_cabriolet-t2.jpg" alt="">
+    </template>
+
+
+
+
+    <template id="vtoraya_mawina_template">
+        <img class="vtoraya_mawina" src="https://www.hdcarwallpapers.com/thumbs/2016/2017_mercedes_amg_gt_rear-t2.jpg" alt="">
+    </template>
+
+
+
+
+    <template id="tret_mawina_template">
+        <img class="tret_mawina" src="https://www.hdcarwallpapers.com/thumbs/2011/2011_mercedes_benz_gl_class_grand_edition-t2.jpg" alt="">
+    </template>
+
+    <div id="app">
+        <div class="basy">
+            <nav>
+                <a href="#" @click="switchView('pervaya_mawina')">Первая машина</a>
+                <a href="#" @click="switchView('vtoraya_mawina')">Вторая машина</a>
+                <a href="#" @click="switchView('tret_mawina')">Третья машина</a>
+            </nav>
+        </div>
+        <component :is="currentView" transition="switch"></component>
+    </div>
+
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
